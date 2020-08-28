@@ -1,0 +1,10 @@
+{
+  "name": "php5.4",
+  "dockerFile": "Dockerfile",
+  "forwardPorts": [80],
+  "overrideCommand": false,
+  "mounts": [
+    "source=${localWorkspaceFolder}/html,target=/var/www/html,type=bind,consistency=cached",
+    "source=${localWorkspaceFolder}/php,target=/var/www/php,type=bind,consistency=cached"
+  ]
+}
