@@ -17,10 +17,11 @@ CMD ["/usr/sbin/httpd", "-D", "FOREGROUND"]
 
 RUN amazon-linux-extras install epel
 RUN yum install -y \
-    php php-devel php-pear php-pecl-memcache php-xml php-mbstring php-pdo php-mcrypt php-gd \
+    php php-devel php-pear php-pecl-memcache php-pecl-xdebug php-xml php-mbstring php-pdo php-mcrypt php-gd \
     && yum clean all
 
 COPY amazonlinux.php.ini /etc/php.ini
+COPY xdebug.ini /etc/php.d/
 
 ENV environment local
 ENV NLS_LANG Japanese_Japan.AL32UTF8
