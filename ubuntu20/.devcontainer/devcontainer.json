@@ -1,0 +1,9 @@
+{
+  "name": "ubuntu20",
+  "dockerFile": "Dockerfile",
+  "forwardPorts": [80],
+  "overrideCommand": false,
+  "mounts": [
+    "source=${localWorkspaceFolder}/html,target=/var/www/html,type=bind,consistency=cached"
+  ]
+}
