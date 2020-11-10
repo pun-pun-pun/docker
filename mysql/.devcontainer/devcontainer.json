@@ -1,0 +1,6 @@
+{
+  "name": "mysql57",
+  "dockerFile": "Dockerfile",
+  "forwardPorts": [3306],
+  "overrideCommand": false
+}
